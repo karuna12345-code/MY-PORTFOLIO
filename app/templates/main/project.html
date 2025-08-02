@@ -22,7 +22,7 @@
                 {% endif %}
                 <h2 class="text-gray-600 font-semibold mb-2 ">{{d.title}}</h2>
                 <p class="text-gray-600 mb-4">{{d.description}}</p>
-                <a href="{% url "single_project" %}">
+                <a href="{% url "singleproject" d.id %}">
                 <button class="bg-blue-900 text-white px-4 py-2 rounded hover:bg-blue-700">View More</button>
                 </a>
             </div>

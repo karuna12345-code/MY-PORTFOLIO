@@ -1,51 +1,53 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="dark">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Project Detail</title>
-    {% load static %}
-    <link href="{% static 'src/styles.css' %}" rel="stylesheet" />
-    <script src="https://cdn.tailwindcss.com"></script>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Post Form</title>
+  {% load static %}
+  <link href="{% static 'src/styles.css' %}" rel="stylesheet" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  {% include "components/_navbar.html" %}
 </head>
-<body class="bg-gray-100 font-sans min-h-screen flex flex-col">
+<body class="bg-gray-100 dark:bg-gray-900">
 
-    <!-- Navbar -->
-    <header class="bg-white shadow mb-10">
-        <div class="max-w-7xl mx-auto px-4 py-4">
-            {% include "components/_navbar.html" %}
+  <header>
+    {% include "components/_navbar.html" %}
+  </header>
+
+  <main class="flex justify-center items-start pt-[100px] min-h-screen px-4">
+    <div class="bg-white dark:bg-gray-800 border linkedin-border rounded-lg shadow-sm max-w-xl w-full overflow-hidden">
+      <div class="p-4">
+
+        <!-- Post Header -->
+        <div class="flex justify-between items-start mb-3">
+          <h2 class="text-gray-800 font-semibold mb-2">{{data.title}}</h2>
         </div>
-    </header>
-    <!-- Project Detail Section -->
-    <main class="flex-grow">
-        <section class="max-w-3xl mx-auto bg-white p-8 shadow-2xl rounded-lg border">
-            <h1 class="text-3xl font-bold mb-6 text-center"> </h1>
 
-            <div class="mb-6">
-                <img src=""  class="w-full h-auto rounded shadow-lg">
-            </div>
+        <!-- Post Content -->
+        <div class="text-sm text-primary mb-3 break-words">
+          <p>
+           {{data.description}}
+          </p>
+        </div>
 
-            <div class="mb-4">
-                <h2 class="text-xl font-semibold mb-2">Description</h2>
-                <p class="text-gray-700"></p>
-            </div>
+        <!-- Media (Optional - Example Image) -->
+        <div class="mb-3 -mx-4 sm:mx-0 sm:rounded-lg overflow-hidden">
+          <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80"
+               alt="Post media content" class="w-full object-cover">
+        </div>
 
-            <div class="flex justify-end space-x-4 mt-8">
-                <a href="" 
-                   class="bg-yellow-500 text-white px-4 py-2 rounded hover:bg-yellow-400">
-                    Edit
-                </a>
-                    <button type="submit" class="bg-red-600 text-white px-4 py-2 rounded hover:bg-red-500">
-                        Delete
-                    </button>
-                </form>
-            </div>
-        </section>
-    </main>
+        <!-- Action Buttons -->
+        <div class="flex justify-end gap-2 mt-4">
+            <a href="{% url "editproject" %}">
+          <button class="bg-gray-800 text-white px-4 py-1 rounded hover:bg-gray-700 transition">Edit</button>
+            </a>
+          <button class="bg-gray-800 text-white px-4 py-1 rounded hover:bg-gray-700 transition">Delete</button>
+        </div>
 
-    <!-- Footer -->
-    <footer class="text-center py-4 text-gray-500">
-        © 2025 Your Portfolio
-    </footer>
+      </div>
+    </div>
+  </main>
 </body>
 </html>
+

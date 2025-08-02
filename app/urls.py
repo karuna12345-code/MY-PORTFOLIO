@@ -1,5 +1,5 @@
 from django.urls import path
-from .views.main_view import home, skill, project, contact, about, service, add_project, single_project
+from .views.main_view import home, skill, project, contact, about, service, add_project, single_project, edit_project
 
 urlpatterns = [
     path('', home, name='home'),
@@ -9,5 +9,6 @@ urlpatterns = [
     path('contact/',contact, name='contact'),
     path('about/', about, name='about'),
     path('add_project/', add_project, name='add_project'),
-    path('single_pgoject/',single_project, name='single_project')
+    path('single_project/<int:id>',single_project, name='singleproject'),
+    path('edit_Project/', edit_project, name='editproject')
 ]

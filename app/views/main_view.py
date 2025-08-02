@@ -36,8 +36,10 @@ def project(request):
     project_data= Project.objects.all()
     return render(request,'main/project.html',{'data':project_data})
 
-def single_project(request):
-    return render(request,'single/single_project.html')
+
+def single_project(request,id):
+     project_data=Project.objects.get(id=id)
+     return render(request,'single/single_project.html',{'data':project_data})
 
 
 def contact(request):
@@ -50,3 +52,6 @@ def skill(request):
 
 def service(request):
     return render(request, 'main/service.html')
+
+def edit_project(request):
+    return render(request,'edit/edit_project.html')
