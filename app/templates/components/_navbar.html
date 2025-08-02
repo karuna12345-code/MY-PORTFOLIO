@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Portfolio Navbar</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-50">
+
+  <nav class="bg-white shadow-md fixed w-full z-10">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex justify-between items-center h-16">
+        <div class="flex items-center">
+          <span class="text-xl font-bold text-indigo-700">MyPortfolio</span>
+        </div>
+
+        <!-- Menu Toggle Button -->
+        <input type="checkbox" id="menu-toggle" class="hidden">
+        <label for="menu-toggle" class="cursor-pointer md:hidden block">
+          <svg class="h-6 w-6 text-gray-700" xmlns="http://www.w3.org/2000/svg" fill="none"
+            viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+              d="M4 6h16M4 12h16M4 18h16"/>
+          </svg>
+        </label>
+
+        <!-- Desktop Menu -->
+        <div class="hidden md:flex space-x-6 items-center">
+          <a href="{% url "home" %}" class="text-blue-700 hover:text-indigo-600 font-medium">Home</a>
+          <a href="{% url "service" %}" class="text-blue-700 hover:text-indigo-600 font-medium">Services</a>
+          <a href="{% url "project" %}" class="text-blue-700 hover:text-indigo-600 font-medium">Projects</a>
+          <a href="{% url "about" %}" class="text-blue-700 hover:text-indigo-600 font-medium">About</a>
+          <a href="{% url "contact" %}" class="text-blue-700 hover:text-indigo-600 font-medium">Contact</a>
+          <a href="{% url "skill" %}" class="text-blue-700 hover:text-indigo-600 font-medium">Skill</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Mobile Menu -->
+    <div class="md:hidden">
+      <div id="menu" class="px-4 pt-2 pb-4 space-y-2 hidden" >
+        <a href="#home" class="block text-gray-700 hover:text-indigo-600 font-medium">Home</a>
+        <a href="#services" class="block text-gray-700 hover:text-indigo-600 font-medium">Services</a>
+        <a href="#projects" class="block text-gray-700 hover:text-indigo-600 font-medium">Projects</a>
+        <a href="#about" class="block text-gray-700 hover:text-indigo-600 font-medium">About</a>
+        <a href="#contact" class="block text-gray-700 hover:text-indigo-600 font-medium">Contact</a>
+      </div>
+    </div>
+  </nav>
+
+  <style>
+    /* Checkbox hack for toggling menu visibility */
+    #menu-toggle:checked ~ .md\:hidden #menu {
+      display: block;
+    }
+  </style>
+
+</body>
+</html>

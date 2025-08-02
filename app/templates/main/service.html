@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Services</title>
+      {% load static %}
+<link  href ="{% static 'src/styles.css' %}" rel="stylesheet" />
+    <script src="https://cdn.tailwindcss.com"></script>
+     {% include "components/_navbar.html" %}
+</head>
+<body class="bg-gray-100 text-gray-800 font-sans">
+
+    <section class="max-w-6xl mx-auto p-8">
+        <h1 class="text-4xl font-bold text-center mb-12 mt-[100px]">My Services</h1>
+
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+
+            <!-- Service 1 -->
+            <div class="bg-white border rounded-lg shadow-2xl p-6 text-center">
+                <img src="https://via.placeholder.com/150" alt="Web Development" class="mx-auto mb-4 rounded">
+                <h2 class="text-xl font-semibold mb-2">Web Development</h2>
+                <p class="text-gray-600 mb-4">
+                    Building modern, responsive, and SEO-friendly websites using the latest technologies like HTML, CSS, JavaScript, and frameworks like React.
+                </p>
+            </div>
+
+            <!-- Service 2 -->
+            <div class="bg-white border rounded-lg shadow-2xl p-6 text-center">
+                <img src="https://via.placeholder.com/150" alt="UI/UX Design" class="mx-auto mb-4 rounded">
+                <h2 class="text-xl font-semibold mb-2">UI/UX Design</h2>
+                <p class="text-gray-600 mb-4">
+                    Crafting user-centered designs that offer an intuitive and engaging experience, ensuring usability and visual appeal for your digital products.
+                </p>
+            </div>
+
+            <!-- Service 3 -->
+            <div class="bg-white border rounded-lg shadow-2xl p-6 text-center">
+                <img src="https://via.placeholder.com/150" alt="Mobile App Development" class="mx-auto mb-4 rounded">
+                <h2 class="text-xl font-semibold mb-2">Mobile App Development</h2>
+                <p class="text-gray-600 mb-4">
+                    Creating efficient and scalable mobile applications for Android and iOS platforms with a focus on performance and user experience.
+                </p>
+            </div>
+
+            <!-- Service 4 -->
+            <div class="bg-white border rounded-lg shadow-2xl p-6 text-center">
+                <img src="https://via.placeholder.com/150" alt="SEO Optimization" class="mx-auto mb-4 rounded">
+                <h2 class="text-xl font-semibold mb-2">SEO Optimization</h2>
+                <p class="text-gray-600 mb-4">
+                    Enhancing your website's visibility on search engines with expert SEO strategies to drive more organic traffic and improve rankings.
+                </p>
+            </div>
+
+            <!-- Service 5 -->
+            <div class="bg-white border rounded-lg shadow-2xl p-6 text-center">
+                <img src="https://via.placeholder.com/150" alt="Consulting" class="mx-auto mb-4 rounded">
+                <h2 class="text-xl font-semibold mb-2">IT Consulting</h2>
+                <p class="text-gray-600 mb-4">
+                    Providing expert advice on technology solutions, digital transformation, and optimizing business processes through innovative IT strategies.
+                </p>
+            </div>
+
+            <!-- Service 6 -->
+            <div class="bg-white border rounded-lg shadow-2xl p-6 text-center">
+                <img src="https://via.placeholder.com/150" alt="Custom Software" class="mx-auto mb-4 rounded">
+                <h2 class="text-xl font-semibold mb-2">Custom Software Solutions</h2>
+                <p class="text-gray-600 mb-4">
+                    Developing tailored software solutions to meet unique business requirements, ensuring scalability, security, and performance.
+                </p>
+            </div>
+
+        </div>
+    </section>
+
+</body>
+</html>

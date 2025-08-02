@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Enhanced Portfolio</title>
+     {% load static %}
+<link  href ="{% static 'src/styles.css' %}" rel="stylesheet" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    {% include "components/_navbar.html" %}
+</head>
+<body class="font-sans text-gray-800">
+
+    <!-- Home -->
+    <section id="home" class="h-screen flex flex-col items-center justify-center bg-gray-100 text-center space-y-4">
+        <img src="https://via.placeholder.com/200" alt="Profile Image" class="rounded-full border-4 border-gray-300 shadow-xl">
+        <h1 class="text-4xl font-bold">Welcome to My Portfolio</h1>
+        <p class="text-lg">I am a Web Developer & Designer</p>
+    </section>
+
+    <!-- About -->
+    <section id="about" class="py-12 bg-white">
+        <div class="max-w-6xl mx-auto px-4 text-center space-y-6">
+            <h2 class="text-3xl font-bold">About Me</h2>
+            <img src="https://via.placeholder.com/300x200" alt="About Image" class="mx-auto rounded shadow-xl border border-gray-300">
+            <p>I am a passionate developer with expertise in frontend and backend development, committed to building user-friendly and responsive applications.</p>
+        </div>
+    </section>
+
+    <!-- Skills -->
+    <section id="skills" class="py-12 bg-gray-100">
+        <div class="max-w-6xl mx-auto px-4 text-center">
+            <h2 class="text-3xl font-bold mb-6">Skills</h2>
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-6">
+                <div class="p-4 border rounded shadow-2xl">HTML</div>
+                <div class="p-4 border rounded shadow-2xl">CSS</div>
+                <div class="p-4 border rounded shadow-2xl">JavaScript</div>
+                <div class="p-4 border rounded shadow-2xl">React</div>
+                <div class="p-4 border rounded shadow-2xl">Tailwind CSS</div>
+                <div class="p-4 border rounded shadow-2xl">Python</div>
+                <div class="p-4 border rounded shadow-2xl">Django</div>
+                <div class="p-4 border rounded shadow-2xl">Git</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services -->
+    <section id="services" class="py-12 bg-white">
+        <div class="max-w-6xl mx-auto px-4 text-center">
+            <h2 class="text-3xl font-bold mb-6">Services</h2>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                <div class="p-4 border rounded shadow-2xl">
+                    <img src="https://via.placeholder.com/150" alt="Service 1" class="mx-auto mb-2 rounded">
+                    <h3 class="font-semibold">Web Development</h3>
+                </div>
+                <div class="p-4 border rounded shadow-2xl">
+                    <img src="https://via.placeholder.com/150" alt="Service 2" class="mx-auto mb-2 rounded">
+                    <h3 class="font-semibold">UI/UX Design</h3>
+                </div>
+                <div class="p-4 border rounded shadow-2xl">
+                    <img src="https://via.placeholder.com/150" alt="Service 3" class="mx-auto mb-2 rounded">
+                    <h3 class="font-semibold">SEO Optimization</h3>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Recent Projects -->
+    <section id="projects" class="py-12 bg-gray-100">
+        <div class="max-w-6xl mx-auto px-4 text-center">
+            <h2 class="text-3xl font-bold mb-6">Recent Projects</h2>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                <div class="bg-white p-4 rounded border shadow-2xl">
+                    <img src="https://via.placeholder.com/250x150" alt="Project 1" class="mb-2 rounded">
+                    <h3 class="font-semibold">Project 1</h3>
+                </div>
+                <div class="bg-white p-4 rounded border shadow-2xl">
+                    <img src="https://via.placeholder.com/250x150" alt="Project 2" class="mb-2 rounded">
+                    <h3 class="font-semibold">Project 2</h3>
+                </div>
+                <div class="bg-white p-4 rounded border shadow-2xl">
+                    <img src="https://via.placeholder.com/250x150" alt="Project 3" class="mb-2 rounded">
+                    <h3 class="font-semibold">Project 3</h3>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact -->
+    <section id="contact" class="py-12 bg-white">
+        <div class="max-w-6xl mx-auto px-4 text-center">
+            <h2 class="text-3xl font-bold mb-6">Contact Me</h2>
+            <form class="max-w-xl mx-auto space-y-4">
+                <input type="text" placeholder="Your Name" class="w-full p-2 border rounded">
+                <input type="email" placeholder="Your Email" class="w-full p-2 border rounded">
+                <textarea placeholder="Your Message" class="w-full p-2 border rounded"></textarea>
+                <button class="bg-gray-900 text-white px-4 py-2 rounded">Send Message</button>
+            </form>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white text-center p-4">
+        &copy; 2025 MyPortfolio. All rights reserved.
+    </footer>
+
+</body>
+</html>
+
+
+
+
