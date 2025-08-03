@@ -10,5 +10,5 @@ urlpatterns = [
     path('about/', about, name='about'),
     path('add_project/', add_project, name='add_project'),
     path('single_project/<int:id>',single_project, name='singleproject'),
-    path('edit_Project/', edit_project, name='editproject')
+    path('edit_Project/<int:id>', edit_project, name='editproject')
 ]

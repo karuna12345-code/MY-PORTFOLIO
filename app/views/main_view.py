@@ -41,6 +41,16 @@ def single_project(request,id):
      project_data=Project.objects.get(id=id)
      return render(request,'single/single_project.html',{'data':project_data})
 
+def edit_project(request,id):
+    project_data=Project.objects.get(id=id)
+    if request.method== "POST":
+        project_data.title=request.POST.get('title')
+        project_data.description=request.POST.get('description')
+        project_data.image=request.FILES.get('image')
+        project_data.save()
+        return redirect('single_project.html')
+    return render(request,'edit/edit_project.html',{"data":project_data})
+
 
 def contact(request):
     return render(request,'main/contact.html')
